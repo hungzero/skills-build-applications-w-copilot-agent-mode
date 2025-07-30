@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-f*a(wmsr2+o=x@lys58cyd*@vrs7)=m_x-d7(2d!zetnl^&vve
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'stunning-space-giggle-7vgx4xr5rqw2pvwx-8000.app.github.dev']
 
 
 # Application definition
@@ -129,3 +129,9 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+# Add trusted origins for CSRF
+CSRF_TRUSTED_ORIGINS = ['https://stunning-space-giggle-7vgx4xr5rqw2pvwx-8000.app.github.dev']
+
+# Disable SSL redirect for development
+SECURE_SSL_REDIRECT = False

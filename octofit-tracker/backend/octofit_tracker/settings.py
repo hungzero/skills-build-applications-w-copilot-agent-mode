@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from corsheaders.defaults import default_headers
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -135,3 +136,7 @@ CSRF_TRUSTED_ORIGINS = ['https://stunning-space-giggle-7vgx4xr5rqw2pvwx-8000.app
 
 # Disable SSL redirect for development
 SECURE_SSL_REDIRECT = False
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'Access-Control-Allow-Origin',
+]
